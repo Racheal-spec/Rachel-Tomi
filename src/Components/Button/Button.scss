@@ -1,0 +1,32 @@
+$btn--primary: #000000;
+$btn--gray: #3B3A40;
+$btn--transparent: transparent;
+
+.btn{
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    &:hover{
+        color: $btn--gray;
+        background-color: $btn--transparent;
+    }
+}
+
+.btn--primary{
+background-color: $btn--primary;
+color: white;
+}
+.btn--secondary{
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 8px 15px;
+    &:hover{
+        background-color: $btn--primary;
+        color: white;
+    }
+}

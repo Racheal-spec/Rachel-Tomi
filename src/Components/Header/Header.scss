@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@700&display=swap');
+
+$gray: #3B3A40;
+$gray-body: #7c7a81;
+$gray-mainbody: #8d8b95;
+
+.navs{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .logoBurger{
+        display: flex;
+        margin-left: 50px;
+        .logo{
+            margin: 0 20px;
+            text-decoration: none;
+            h1{
+                font-family: 'Josefin Slab', serif;
+                font-size: 1.7rem;
+                color: white;
+            }
+        }
+        .fa-times{
+            position: absolute;
+            left: 27%;
+            top: 10%;
+            z-index: 2; 
+            cursor: pointer;
+        }
+        .burger{
+            cursor: pointer;
+             margin-top: 25px;
+            .line1, .line3{
+                width: 25px;
+                height: 2px;
+                background-color: white;
+                margin: 3px 0;
+            }
+            .line2{
+                width: 18px;
+                height: 2px;
+                background-color: white;   
+            }  
+        }
+    }
+   .first-nav{
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+   }
+    .Nav-list{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        .links{
+            text-decoration: none;
+           }
+      li{
+        margin: 0 10px;
+        font-weight: bold;
+        color: $gray;
+        transition: all 0.4s ease-in-out;
+        &:hover{
+            color: white;
+        }
+      }
+    }
+  .social-icons{
+      display: flex;
+      list-style: none;
+      margin: 0 30px;
+      #icon{
+          font-size: 1.5rem;
+          color: $gray;
+          transition: all 0.4s ease-in-out;
+          &:hover{
+              color: white;
+          }
+      }
+    li{
+        margin: 0 10px;
+    }
+  }  
+}
+
+
+@media screen and (min-width: 280px){
+    .social-icons-mobile{
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            list-style: none;
+        li{
+            margin-right: 15px;
+            font-size: 1.5rem;
+            color: white;
+        }
+        }   
+          .Nav-list-mobile{
+              list-style: none;
+              font-weight: bold;
+              text-align: start;
+           .links{
+            text-decoration: none;
+              }
+          }
+          .firstmobile-nav{
+            top: 0;
+            right: 0;
+            left: -100%;
+            display: none;
+          }
+          .nav-active{
+            position: fixed;
+            background-color: $gray-body;  
+            left: 0;
+            z-index: 1;
+            transition: all 0.5s ease;
+            opacity: 1;
+            height: 100vh;
+            width: 30%; 
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+           .Nav-list-mobile{
+               margin-top: 80px;
+            li{
+                margin: 20px 0;
+                color: white;
+            }
+            }
+          }
+}
+
+@media screen and (min-width: 10px) and (max-width: 600px){
+    //Nav-bar mobile
+    .navs .first-nav{
+        display: none;
+    }
+    .nav-active{
+        width: 60%;
+    }
+   .navs{
+    .logoBurger{
+        margin-left: 20px;
+        .logo h1{
+            position: absolute;
+            right: 30%;
+        }
+        .fa-times{
+            left: 50%;
+        }
+    }
+}
+}

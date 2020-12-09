@@ -1,0 +1,136 @@
+$gray: #3B3A40;
+$gray-body: #7c7a81;
+$gray-mainbody: #8d8b95;
+$bg: #EDEDED;
+
+.main-div{
+background-color: white;
+}
+//contact hero styles
+.contact-section{
+    margin: 30px 0;
+    .contact-hero{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        position: relative;
+       
+    .col-1{
+        h2{
+            font-size: 2.5rem;
+        }
+    }    
+    .col-2{
+        img{
+            max-width: 100%;
+        }
+    }
+    }
+}
+
+@media screen and (max-width: 600px){
+    .contact-section{
+      
+        .contact-hero{
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+//contact card section
+
+.card-section{
+    padding: 8% 0;
+    .card-div{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 10px;
+        position: absolute;
+        top: 25%;
+        padding: 50px 0;
+        .card{
+            width: 90%;
+            height: 100%;
+            background-color: white;
+            padding: 30px 10px;
+            margin: 0 40px;
+            box-shadow: 0 2px 3px 3px rgba(0, 0, 0, 0.116);
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+.card-section{
+    height: 100vh;
+    .card-div{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 80px;
+        top: 18%;
+        .card{
+            margin:0 auto;
+            width: 80%;
+             
+        }
+    }
+}
+}
+//contact form section
+
+.form-section{
+    padding: 10% 0;
+    background-color: $bg;
+    .form-div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        .form-img{
+            img{
+                max-width: 100%;
+            }
+            }
+            .main-form{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                form{
+                    width: 50%;
+                    padding: 20px 15px;
+                    border-radius: 8px;
+                    box-shadow: 0px 2px 3px 2px rgba(0, 0, 0, 0.151);
+                    label{
+                        display: flex;
+                        align-self: start;
+                        justify-self: start;
+                        margin: 12px 12px;
+                        font-weight: bold;
+                        .star{
+                            color: rgba(204, 44, 44, 0.801);
+                        }
+                    }
+                    .all-input{
+                        width: 80%;
+                        padding: 20px;
+                    }
+                    .textArea{
+                        width: 70%;
+                        padding: 30px;
+                    }
+                }
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+    .form-section{
+        .form-div{
+            display: grid;
+            grid-template-columns: 1fr;
+            .main-form{
+                padding: 30px 0;
+                form{
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
