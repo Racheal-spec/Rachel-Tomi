@@ -53,7 +53,7 @@ heroTl.from('.logo h1', {opacity: 0, yPercent: -50, delay: 0.5})
 
 const contactTl = gsap.timeline();
 
-contactTl.from('.col-1', {duration: 1, opacity: 0, x: -20})
-         .from('.col-2-img', {duration: 1, opacity: 0, x: 20})
-         .from('.card', {duration: 1, opacity: 0, y: 50 })
+//contactTl.from('.col-1', {duration: 1, opacity: 0, x: -20})
+//contactTl.from('.col-2-img', {duration: 1, opacity: 0, x: 20})
+contactTl.from('.card', {duration: 1, opacity: 0, y: 50 })
 

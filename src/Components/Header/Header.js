@@ -61,7 +61,34 @@ const closeMenu = () => {
   </div>      
  
   <div className={click ? 'firstmobile-nav' : 'nav-active'}>
-  
+  <ul className="Nav-list-mobile">
+   <Link to='/' className="links" onClick={closeMenu}>
+      <li>Home</li>
+   </Link>
+    <Link to={{pathname: "https://blog.racheltomi.com"}} target="_blank" className="links" onClick={closeMenu}>
+      <li>Blog</li>
+    </Link>
+    <Link to='/contact' className="links" onClick={closeMenu}>
+      <li>Contact</li>
+    </Link>
+   </ul>
+  <ul className="social-icons-mobile">
+       <Link to={{pathname:"https://twitter.com/racheltomidev"}} target="_blank" onClick={closeMenu}>
+           <li>
+           <i className="fab fa-twitter-square" id="icon"></i>
+           </li>
+       </Link>
+       <Link to={{pathname:"https://github.com/racheal-spec"}} target="_blank" onClick={closeMenu}>
+           <li>
+           <i className="fab fa-github-square"  id="icon"></i>
+           </li>
+       </Link>
+       <Link to={{pathname:"https://instagram.com/girlliketomi"}} target="_blank" onClick={closeMenu}>
+           <li>
+           <i className="fab fa-instagram-square"  id="icon"></i>
+           </li>
+       </Link>
+   </ul>
   </div>     
 </nav>
     )
