@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {gsap, ScrollTrigger} from 'gsap/all';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -11,7 +12,48 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+gsap.registerPlugin(ScrollTrigger);
+
+/*
+gsap.utils.toArray(".panel").forEach((panel, i) => {
+  ScrollTrigger.create({
+    trigger: panel,
+    start: "top top",
+    pin: true, 
+    pinSpacing: false
+  });
+})
+
+ScrollTrigger.create({
+  snap: 1/4
+})
+*/
+ const headerTl = gsap.timeline();
+
+ headerTl.from('.nav-active', {opacity: 0, x: -100})
+
+
+const heroTl = gsap.timeline();
+
+heroTl.from('.logo h1', {opacity: 0, yPercent: -50, delay: 0.5})
+.from('.links', {
+  opacity: 0,
+  duration: 0.5,
+  yPercent: 50,
+  stagger: 0.2
+})
+.fromTo('.social-icons', {opacity: 0}, {opacity: 1, xPercent: -20})
+.from('.img-hero',{
+  opacity: 0,
+  duration: 0.5,
+  x: -20
+})
+
+const contactTl = gsap.timeline();
+
+contactTl.from('.col-1', {duration: 1, opacity: 0, x: -20})
+         .from('.col-2-img', {duration: 1, opacity: 0, x: 20})
+         .from('.card', {duration: 1, opacity: 0, y: 50 })
+

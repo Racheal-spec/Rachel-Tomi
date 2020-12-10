@@ -4,9 +4,10 @@
 }
 body{
   font-family: 'Laila', serif;
-  background-color:#8d8b95;
+ background-color:#8d8b95;
   position: relative;
-  min-height: 100vh;
+  height: 100%;
   padding-bottom: 3rem;
   width: 100%;
+  margin: 0 auto;
 }

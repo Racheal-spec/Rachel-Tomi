@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom';
 import './Header.scss';
-import {menuIntro} from '../Animate';
 
 
 const Header = () => {
@@ -17,11 +16,6 @@ const closeMenu = () => {
    handleClick();
  }, [])// eslint-disable-line react-hooks/exhaustive-deps
 
-//To make Gsap animation work, use useRef hook to access the MenuIntro animation
-let logoBurger = useRef(null)
-useEffect(() => {
-  menuIntro(logoBurger.current);
-})
   return(
 <nav className="navs">
 <div className="logoBurger">
@@ -40,7 +34,7 @@ useEffect(() => {
    <Link to='/' className="links">
       <li>Home</li>
    </Link>
-    <Link to='/blog' className="links">
+    <Link to={{pathname: "https://blog.racheltomi.com"}} target="_blank" className="links">
       <li>Blog</li>
     </Link>
     <Link to='/contact' className="links">
@@ -48,17 +42,17 @@ useEffect(() => {
     </Link>
    </ul>
   <ul className="social-icons">
-       <Link to=''>
+       <Link to={{pathname:"https://twitter.com/racheltomidev"}} target="_blank">
            <li>
            <i className="fab fa-twitter-square" id="icon"></i>
            </li>
        </Link>
-       <Link to=''>
+       <Link to={{pathname:"https://github.com/racheal-spec"}} target="_blank">
            <li>
            <i className="fab fa-github-square"  id="icon"></i>
            </li>
        </Link>
-       <Link to=''>
+       <Link to={{pathname:"https://instagram.com/girlliketomi"}} target="_blank">
            <li>
            <i className="fab fa-instagram-square"  id="icon"></i>
            </li>
@@ -67,34 +61,7 @@ useEffect(() => {
   </div>      
  
   <div className={click ? 'firstmobile-nav' : 'nav-active'}>
-   <ul className="Nav-list-mobile">
-   <Link to='/' className="links" onClick={closeMenu}>
-      <li>Home</li>
-   </Link>
-    <Link to='/blog' className="links" onClick={closeMenu}>
-      <li>Blog</li>
-    </Link>
-    <Link to='/contact' className="links" onClick={closeMenu}>
-      <li>Contact</li>
-    </Link>
-   </ul>
-  <ul className="social-icons-mobile">
-       <Link to='' onClick={closeMenu}>
-           <li>
-           <i className="fab fa-twitter-square" id="icon"></i>
-           </li>
-       </Link>
-       <Link to='' onClick={closeMenu}>
-           <li>
-           <i className="fab fa-github-square"  id="icon"></i>
-           </li>
-       </Link>
-       <Link to='' onClick={closeMenu}>
-           <li>
-           <i className="fab fa-instagram-square"  id="icon"></i>
-           </li>
-       </Link>
-   </ul>
+  
   </div>     
 </nav>
     )

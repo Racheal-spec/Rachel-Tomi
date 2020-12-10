@@ -6,25 +6,9 @@ import Button from '../Button/Button';
 const Portfolio = () => {
 
 
-/*    
-const HrLine = ({color}) =>(
-    <hr 
-        style= {
-            {
-                color: color,
-                backgroundColor: color,
-                height: .5,
-                margin: 30,
-                width: 800,
-                marginLeft: "auto",
-                marginRight: "auto",
-            }
-        }
-    />
-)
-*/
+
     return(
-<div className="portfolio-section">
+<div className="panel portfolio-section">
     <h2>Portfolio</h2>
     <h6>FEATURED PROJECTS</h6>
 

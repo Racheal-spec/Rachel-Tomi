@@ -6,29 +6,29 @@ const Footer = () => {
 
     return(
 <footer>
- < div className="footer-div">
+ < div className="panel footer-div">
 <div className="footer-contact">
     <Link to="/" className="logo">
           <h1>[Rachel Tomi]</h1>
     </Link>
     <p>I'm always ready to work on new projects, you can  
-    <Link to="/" className="contact">
+    <Link to="/contact" className="contact">
       <span> contact </span>
         </Link>
          me on all social media platform for easy communication
     </p>
     <ul className="social-icons">
-       <Link to='' className="footer-link">
+       <Link to={{pathname:"https://twitter.com/racheltomidev"}} target="_blank" className="footer-link">
            <li>
            <i className="fab fa-twitter-square" id="icon"></i>
            </li>
        </Link>
-       <Link to='' className="footer-link">
+       <Link to={{pathname:"https://github.com/racheal-spec"}} target="_blank" className="footer-link">
            <li>
            <i className="fab fa-github-square"  id="icon"></i>
            </li>
        </Link>
-       <Link to='' className="footer-link">
+       <Link to={{pathname:"https://instagram.com/racheal-spec"}} target="_blank" className="footer-link">
            <li>
            <i className="fab fa-instagram-square"  id="icon"></i>
            </li>

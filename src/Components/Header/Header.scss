@@ -8,11 +8,13 @@ $gray-mainbody: #8d8b95;
     display: flex;
     flex-direction: column;
     position: relative;
+    width: 98%;
+    margin: 0 auto;
     .logoBurger{
         display: flex;
         margin-left: 50px;
         .logo{
-            margin: 0 20px;
+           margin: 0 20px;
             text-decoration: none;
             h1{
                 font-family: 'Josefin Slab', serif;
@@ -23,13 +25,14 @@ $gray-mainbody: #8d8b95;
         .fa-times{
             position: absolute;
             left: 27%;
-            top: 10%;
+            top: 20%;
+            color: white;
             z-index: 2; 
             cursor: pointer;
         }
         .burger{
             cursor: pointer;
-             margin-top: 25px;
+            margin-top: 25px;
             .line1, .line3{
                 width: 25px;
                 height: 2px;
@@ -50,8 +53,6 @@ $gray-mainbody: #8d8b95;
    }
     .Nav-list{
         display: flex;
-        align-items: center;
-        justify-content: center;
         list-style: none;
         .links{
             text-decoration: none;
@@ -105,11 +106,12 @@ $gray-mainbody: #8d8b95;
             text-decoration: none;
               }
           }
-          .firstmobile-nav{
+          .firstmobile-nav {
+            /*display: none;*/
             top: 0;
             right: 0;
             left: -100%;
-            display: none;
+            opacity: 1;
           }
           .nav-active{
             position: fixed;
@@ -144,11 +146,10 @@ $gray-mainbody: #8d8b95;
     }
    .navs{
     .logoBurger{
-        margin-left: 20px;
-        .logo h1{
-            position: absolute;
-            right: 30%;
-        }
+        margin-left: 18px;
+       .logo{
+           margin: 0 auto;
+       }
         .fa-times{
             left: 50%;
         }

@@ -7,7 +7,7 @@ import Contactcard from './Contactcard';
 const Contact = () => {
 
     return(
-<div className="main-div">
+<div className="main-div panel">
   <ContactHero />
   <Contactcard />
   <Contactform />

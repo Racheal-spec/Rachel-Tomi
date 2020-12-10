@@ -4,13 +4,13 @@ $gray-mainbody: #8d8b95;
 
 footer{
     color: white;
-    width: 100%;
+    width: 90%;
     height: 100%;
-    padding-top: 40px;
+    margin: 0 auto;
     .footer-div{
         display: grid;
+        background-color: $gray-mainbody;
         grid-template-columns: repeat(2, 1fr);
-        margin: 0 40px;
         .footer-contact{
             .contact{
                 text-decoration: none;
@@ -29,7 +29,7 @@ footer{
                list-style: none;
                display: flex;
                position: absolute;
-               left: 0;
+               left: 4%;
                .footer-link{
                    color: white;
                    #icon{
