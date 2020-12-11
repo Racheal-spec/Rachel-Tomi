@@ -9,14 +9,11 @@ const Portfolio = () => {
 
     return(
 <div className="panel portfolio-section">
-    <h2>Portfolio</h2>
-    <h6>FEATURED PROJECTS</h6>
-
+<h6>PORTFOLIO</h6>
     {/*first project*/}
-
     <div className="project">
     <div className="project-text">
-            <h3>Delfy</h3>
+            <h3>Delfy<i className="fas fa-arrow-right"></i></h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dictum nulla at nisl luctus pretium.
                  Quisque ut blandit velit.
             </p>
@@ -24,7 +21,7 @@ const Portfolio = () => {
             <Button buttonStyle="btn--secondary">Code</Button>
         </div>
         <div className="project-text">
-            <h3>FashionFiesta</h3>
+            <h3>FashionFiesta<i className="fas fa-arrow-right"></i></h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dictum nulla at nisl luctus pretium.
                  Quisque ut blandit velit.
             </p>
@@ -38,7 +35,7 @@ const Portfolio = () => {
     
      <div className="project">
      <div className="project-text">
-            <h3>MyClinic</h3>
+            <h3>MyClinic<i className="fas fa-arrow-right"></i></h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dictum nulla at nisl luctus pretium.
                  Quisque ut blandit velit.
             </p>
@@ -46,7 +43,7 @@ const Portfolio = () => {
             <Button buttonStyle="btn--secondary">Code</Button>
         </div>
         <div className="project-text">
-            <h3>Best Interior</h3>
+            <h3>Best Interior<i className="fas fa-arrow-right"></i></h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dictum nulla at nisl luctus pretium.
                  Quisque ut blandit velit.
             </p>
@@ -54,21 +51,6 @@ const Portfolio = () => {
             <Button buttonStyle="btn--secondary">Code</Button>
         </div>
     </div>
-    {/*<HrLine color="#7c7a81" /> */}
-
-     {/*third project*/}
-    
-     <div className="project">
-     <div className="project-text">
-            <h3>Rachel Tomi</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dictum nulla at nisl luctus pretium.
-                 Quisque ut blandit velit.
-            </p>
-            <Button>View Demo</Button>
-            <Button buttonStyle="btn--secondary">Code</Button>
-        </div>
-    </div>
-    {/*<HrLine color="#7c7a81" /> */}
 
 </div>
  

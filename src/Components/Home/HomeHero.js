@@ -1,15 +1,25 @@
 import React from 'react';
+import {useHistory} from 'react-router-dom';
 import heroImg from '../../img/Tomi36new.png';
+import Button from '../Button/Button';
 const HomeHero = () => {
+let history = useHistory();
 
+const redirect = () => {
+    history.push('/contact')
+}
+    
     return(
 <div className="panel homehero-section">
+<div className="hero">
     <div className="hero-img">
         <img src={heroImg} className="img-hero" alt="Rachel-Tomi"/>
     </div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dictum nulla at nisl luctus pretium. Quisque ut blandit velit. Quisque finibus nunc id tellus rutrum eleifend. Duis tincidunt nec magna et efficitur. Nullam pharetra libero quam, a pharetra lacus vulputate eget. Aliquam magna quam, vestibulum quis mattis id, tincidunt a augue. 
-        Proin pellentesque, ex vitae eleifend suscipit, dui felis consequat eros, nec pretium diam augue id risus.
+    <p>
+    I’m Rachel — a freelance front end developer based in the Lagos, Nigeria.
     </p>
+    <Button onClick={redirect}>WORK WITH ME</Button>
+</div>
 </div>
     )
 }

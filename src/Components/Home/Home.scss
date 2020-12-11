@@ -1,47 +1,80 @@
-$gray: #3B3A40;
-$gray-body: #7c7a81;
-$gray-mainbody: #8d8b95;
+$primary: #0B0C0D;
+$gray-body: #606772;
 
 //Home hero styles
 
 .homehero-section{
-    background-color: $gray-mainbody;
-    width: 90%;
-    margin: 0 auto;
-    p{
+    background-color: $primary;
+    padding: 80px 0;
+    .hero{
         width: 80%;
-        text-align: left;
-    }  
-    .hero-img{
-
-        img{
+        margin: 0 auto;
+        p{
             width: 80%;
-            height: 540px;
-            object-fit: cover;
+            color: white;
+            margin: 20px auto;
+            font-size: 22px;
+        }  
+        .hero-img{
             display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
+            align-items: center;
+            justify-content: center;
+            img{
+                width: 40%;
+                height: 60vh;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+    
         }
-
     }
 }
 
 @media screen and (max-width: 600px) {
     .homehero-section{
         padding: 10px 0px;
-        width: 90%;
-        margin: 0 auto;
-        .hero-img{
-            img{
+        .hero{
+            width: 90%;
+            margin: 0 auto;
+            .hero-img{
+                img{
+                    width: 100%;
+                    height: 38vh;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+            p{
                 width: 100%;
-                height: 250px;
-                /*margin:0 auto;*/
+                margin: 20px auto;
+                padding-top: 10px;
             }
         }
-        p{
-            width: 100%;
-            margin: 0 auto;
-            padding-top: 10px;
+        }
+}
+@media screen and (min-width: 768px) and (max-width: 1366px){
+    .homehero-section{
+       .hero{
+        .hero-img{
+            img{
+                width: 40%;
+                height: 60vh;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+       }
+    }
+}
+@media screen and (min-width: 1200px) {
+    .homehero-section{
+        .hero-img{
+            img{
+                width: 40%;
+                height: 60vh;
+                object-fit: cover;
+                border-radius: 50%;
+            }
         }
     }
 }
@@ -49,41 +82,44 @@ $gray-mainbody: #8d8b95;
 //Portfolio Section styles
 
 .portfolio-section{
+    background-color: $primary;
     padding: 50px 0;
-    background-color: $gray-mainbody;
-    width: 90%;
-    margin: 0 auto;
-    h2, h6{
-        color: white;
-        text-align: left;
+    h6{
+        color: $gray-body;
+        position: absolute;
+        left: 10%;
+        margin: 5px 0;
     }
     .project{
+        width: 80%;
+        margin: 0 auto;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 30px;
-        .project-img{
-
-            img{
-                max-width: 100%;
+        .project-text{
+            text-align: left;
+            margin:20px 0;
+            h3{
+             color: white;
             }
+           .fa-arrow-right{
+               margin: 0 10px;
+           } 
+           p{
+             width: 100%;
+             color: $gray-body;
+             font-size: 18px;
+           }
         }
     }
-   .project-text{
-       text-align: left;
-       h3{
-        color: white;
-       }
-      p{
-        width: 80%;
-      }
-   }
 }
 
 @media screen and (max-width: 600px){
     .portfolio-section{
-        width: 90%;
         .project{
             grid-template-columns: 1fr;
+            width: 90%;
+            margin: auto;
           .project-img{
               img{
                 margin: auto;
@@ -95,7 +131,7 @@ $gray-mainbody: #8d8b95;
                 }
                 p{
                     width: 100%;
-                    margin: auto;
+                    margin: 20px auto;
                 }
         }
         }
@@ -105,46 +141,59 @@ $gray-mainbody: #8d8b95;
 //Blog section
 
 .blog-section{
-    width: 90%;
-    margin: 0 auto;
-    padding: 30px 0;
-    background-color: $gray-mainbody;
-    h2, h6{
+    background-color: $primary;
+    padding: 100px 0;
+    h6{
+        color: $gray-body;
+        position: absolute;
+        left: 10%;
+        margin: -60px 0;
+    }
+    .readmore{
         color: white;
+        font-weight: bold;
         text-align: left;
+        position: absolute;
+        left: 10%;
+        margin: 5px 0;
+        text-decoration: none;
+        font-size: 16px;
+        transition: all 0.3s ease-in-out;
+        .fa-arrow-right{margin: 0 10px;}
+        &:hover{
+            color: $gray-body;
+        }
     }
     .blog-card{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 20px;
-        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 50px;
+        width: 80%;
+        margin: 0 auto;
         .card{
-         
             .card-body{
-
                 img{
                     max-width: 100%;
                 }
             }
           .card-text{
            text-align: left;
+           .blog-link{
+            text-decoration: none;
+        }
+           .fa-arrow-right{
+            margin: 0 10px;
+        } 
            p{
                font-size: 13px;
+               color: $gray-body;
            }
             h3{
                 color: white;
+                text-decoration: none;
             }
             .links{
                 text-decoration: none;
-            }
-            .readMore{
-                color: white;
-                font-weight: bold;
-                font-size: 14px;
-                transition: all 0.3s ease-in-out;
-                &:hover{
-                    color: $gray;
-                }
             }
           }  
         } 
@@ -153,12 +202,11 @@ $gray-mainbody: #8d8b95;
 
 @media screen and (max-width: 600px){
     .blog-section{
-      margin-left: 0;
-      width: 90%;
-      margin: auto;
         .blog-card{
             display: grid;
             grid-template-columns: 1fr;
+            width: 90%;
+            margin: auto;
             .card{
                 margin: 10px 0;
             }

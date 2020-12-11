@@ -1,38 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@700&display=swap');
 
-$gray: #3B3A40;
-$gray-body: #7c7a81;
-$gray-mainbody: #8d8b95;
+$primaryNav: #14191a;
+$primary: #0B0C0D;
+$gray-body: #606772;
 
 .navs{
+    background-color: $primary;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     flex-direction: column;
     position: relative;
-    width: 98%;
-    margin: 0 auto;
-    .logoBurger{
-        display: flex;
-        margin-left: 50px;
-        .logo{
-           margin: 0 20px;
-            text-decoration: none;
-            h1{
-                font-family: 'Josefin Slab', serif;
-                font-size: 1.7rem;
-                color: white;
-            }
-        }
-        .fa-times{
-            position: absolute;
-            left: 27%;
-            top: 20%;
-            color: white;
-            z-index: 2; 
-            cursor: pointer;
-        }
+    .first-nav{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      justify-content: space-between;
+      width: 80%;
+      margin: 0 auto;
         .burger{
             cursor: pointer;
-            margin-top: 25px;
             .line1, .line3{
                 width: 25px;
                 height: 2px;
@@ -45,45 +32,50 @@ $gray-mainbody: #8d8b95;
                 background-color: white;   
             }  
         }
-    }
-   .first-nav{
-       display: flex;
-       align-items: center;
-       justify-content: space-between;
-   }
-    .Nav-list{
-        display: flex;
-        list-style: none;
-        .links{
-            text-decoration: none;
-           }
-      li{
-        margin: 0 10px;
-        font-weight: bold;
-        color: $gray;
-        transition: all 0.4s ease-in-out;
-        &:hover{
-            color: white;
+        .logo-div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .logo{
+                text-decoration: none;
+                h1{
+                    font-family: 'Josefin Slab', serif;
+                    font-size: 1.7rem;
+                    color: white;
+                }
+            }
         }
-      }
-    }
-  .social-icons{
-      display: flex;
-      list-style: none;
-      margin: 0 30px;
-      #icon{
-          font-size: 1.5rem;
-          color: $gray;
-          transition: all 0.4s ease-in-out;
-          &:hover{
-              color: white;
+        .social-icons{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            margin: 0px 30px;
+            #icon{
+                font-size: 1.5rem;
+                color: $gray-body;
+                transition: all 0.4s ease-in-out;
+                &:hover{
+                    color: white;
+                }
+            }
+          li{
+              margin: 0 10px;
           }
+        }  
       }
-    li{
-        margin: 0 10px;
+        .fa-times{
+            position: absolute;
+            left: 25%;
+            top: 20%;
+            font-size: 1rem;
+            color: white;
+            z-index: 2; 
+            cursor: pointer;
+        }    
     }
-  }  
-}
+
+  
 
 
 @media screen and (min-width: 280px){
@@ -106,19 +98,19 @@ $gray-mainbody: #8d8b95;
             text-decoration: none;
               }
           }
-          .firstmobile-nav {
+          #nav {
             display: none;
             top: 0;
             right: 0;
             left: -100%;
             opacity: 1;
           }
-          .nav-active{
+          #nav-active{
             position: fixed;
-            background-color: $gray-body;  
+            background-color: $primaryNav;  
             left: 0;
             z-index: 1;
-            transition: all 0.5s ease;
+            transition: all 0.2s ease;
             opacity: 1;
             height: 100vh;
             width: 30%; 
@@ -138,21 +130,41 @@ $gray-mainbody: #8d8b95;
 
 @media screen and (min-width: 10px) and (max-width: 600px){
     //Nav-bar mobile
-    .navs .first-nav{
-        display: none;
-    }
-    .nav-active{
-        width: 60%;
+
+    #nav-active{
+        width: 80%;
+        position: fixed;
     }
    .navs{
-    .logoBurger{
+    .fa-times{
+    left: 70%;
+    top: 3%;
+    position: fixed;
+    }
+   .first-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px;
+    .burger{
+        position: absolute;
+        left: 8%;
+    }
+    .logo-div{
         margin-left: 18px;
        .logo{
-           margin: 0 auto;
+      
+           h1{
+
+           }
        }
         .fa-times{
             left: 50%;
         }
     }
+    .social-icons{
+        display: none;
+    }
+   }
 }
 }

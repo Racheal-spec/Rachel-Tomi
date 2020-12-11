@@ -18,29 +18,19 @@ const closeMenu = () => {
 
   return(
 <nav className="navs">
-<div className="logoBurger">
+  <div className="first-nav">
           <div className= {click? 'burger' : 'fas fa-times'}  onClick={handleClick}>
                <div className='line1'></div>
                <div className='line2'></div>
                <div className='line3'></div>
             </div>  
-        <Link to="/" className="logo">
+
+        <div className="logo-div">
+      <Link to="/" className="logo">
           <h1>[Rachel Tomi]</h1>
         </Link>
-        </div> 
- 
-    <div className="first-nav">
-   <ul className="Nav-list">
-   <Link to='/' className="links">
-      <li>Home</li>
-   </Link>
-    <Link to={{pathname: "https://blog.racheltomi.com"}} target="_blank" className="links">
-      <li>Blog</li>
-    </Link>
-    <Link to='/contact' className="links">
-      <li>Contact</li>
-    </Link>
-   </ul>
+      </div>
+      <div className="nav-social">
   <ul className="social-icons">
        <Link to={{pathname:"https://twitter.com/racheltomidev"}} target="_blank">
            <li>
@@ -57,10 +47,11 @@ const closeMenu = () => {
            <i className="fab fa-instagram-square"  id="icon"></i>
            </li>
        </Link>
-   </ul>
-  </div>      
- 
-  <div className={click ? 'firstmobile-nav' : 'nav-active'}>
+   </ul> 
+   </div>    
+   </div>
+  
+  <div id={click ? 'nav' : 'nav-active'}>
   <ul className="Nav-list-mobile">
    <Link to='/' className="links" onClick={closeMenu}>
       <li>Home</li>
@@ -90,7 +81,7 @@ const closeMenu = () => {
        </Link>
    </ul>
   </div>     
-</nav>
+  </nav>
     )
 }
 

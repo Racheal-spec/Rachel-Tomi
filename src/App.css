@@ -1,13 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Laila&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 .App {
   text-align: center;
 }
 body{
-  font-family: 'Laila', serif;
- background-color:#8d8b95;
+  font-family: 'Inter', sans-serif;
   position: relative;
   height: 100%;
-  padding-bottom: 3rem;
-  width: 100%;
-  margin: 0 auto;
 }

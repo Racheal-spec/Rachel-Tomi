@@ -37,17 +37,12 @@ ScrollTrigger.create({
 
 const heroTl = gsap.timeline();
 
-heroTl.from('.logo h1', {opacity: 0, yPercent: -50, delay: 0.5})
-.from('.links', {
-  opacity: 0,
-  duration: 0.5,
-  yPercent: 50,
-  stagger: 0.2
-})
-.fromTo('.social-icons', {opacity: 0}, {opacity: 1, xPercent: -20})
+heroTl
+.from('.logo h1', {opacity: 0, yPercent: -50, delay: 0.5})
+.fromTo('.social-icons', {opacity: 0}, {opacity: 1, xPercent: 40})
 .from('.img-hero',{
   opacity: 0,
-  duration: 0.5,
+  duration: 1,
   x: -20
 })
 

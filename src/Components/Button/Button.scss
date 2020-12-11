@@ -1,10 +1,9 @@
-$btn--primary: #000000;
+$btn--primary: #2D4DAF;
 $btn--gray: #3B3A40;
 $btn--transparent: transparent;
 
 .btn{
     font-weight: bold;
-    border-radius: 5px;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
     padding: 10px 15px;
@@ -13,6 +12,7 @@ $btn--transparent: transparent;
     &:hover{
         color: $btn--gray;
         background-color: $btn--transparent;
+        border: 1px solid white;
     }
 }
 

@@ -1,39 +1,51 @@
 $gray: #3B3A40;
-$gray-body: #7c7a81;
-$gray-mainbody: #8d8b95;
+$gray-body: #606772;
+$primary: #0B0C0D;
 
 footer{
     color: white;
-    width: 90%;
-    height: 100%;
-    margin: 0 auto;
+    background-color: $primary;
+    padding: 30px 0;
     .footer-div{
         display: grid;
-        background-color: $gray-mainbody;
         grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 120px;
+        width: 80%;
+        margin: 0 auto;
+        height: 100%;
         .footer-contact{
             .contact{
                 text-decoration: none;
+                color: white;
+                font-weight: bold;
+                &:hover{
+                    color: $gray-body;
+                }
             }
-           .logo{
-               color: white;
+           h6{
+               color: $gray-body;
                text-decoration: none;
                text-align: left;
                font-size: 12px;
            }
            p{
-               font-size: 16px;
+               font-size: 14px;
                text-align: left;
+               color: $gray-body;
            }
            .social-icons{
                list-style: none;
                display: flex;
                position: absolute;
-               left: 4%;
+               left: 2%;
                .footer-link{
-                   color: white;
+                   color: $gray-body;
+                   transition: all 0.4s ease-in;
+                   &:hover{
+                    color: white;
+                }
                    #icon{
-                    margin: 0 10px;
+                    margin: 0 5px;
                     font-size: 1.8rem;
                    }
                   
@@ -41,13 +53,15 @@ footer{
            }
         }
         .footer-address{
+            margin: 50px 0;
+            text-align: left;
             p{
                 font-size: 16px;
             }
             .sm-heading{
                 font-size: 14px;
                 font-weight: bold;
-                color: $gray;
+                color: $gray-body;
                 #sm-icon{
                     margin: 0 5px;
                     color: white;
@@ -56,9 +70,9 @@ footer{
            }
     }
     .last-footer-div{
-        color: white;
+        color: $gray-body;
         font-size: 14px;
-        padding-top: 50px;
+        padding-top: 5px;
         text-align: start;
     }
 }
@@ -68,6 +82,12 @@ footer{
         .footer-div{
             display: grid;
             grid-template-columns: 1fr;
+            width: 90%;
+            .footer-contact{
+                .social-icons{
+                    left: -20%;
+                }
+            }
             .footer-address{
                 text-align: left;
                 margin-top: 80px;
