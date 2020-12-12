@@ -10,7 +10,7 @@ $gray-body: #606772;
         width: 80%;
         margin: 0 auto;
         p{
-            width: 80%;
+            width: 60%;
             color: white;
             margin: 20px auto;
             font-size: 22px;
@@ -38,7 +38,7 @@ $gray-body: #606772;
             margin: 0 auto;
             .hero-img{
                 img{
-                    width: 100%;
+                    width: 80%;
                     height: 38vh;
                     object-fit: cover;
                     border-radius: 50%;
@@ -58,7 +58,7 @@ $gray-body: #606772;
         .hero-img{
             img{
                 width: 40%;
-                height: 60vh;
+                height: 65vh;
                 object-fit: cover;
                 border-radius: 50%;
             }
@@ -108,7 +108,7 @@ $gray-body: #606772;
            p{
              width: 100%;
              color: $gray-body;
-             font-size: 18px;
+             font-size: 16px;
            }
         }
     }
@@ -116,6 +116,9 @@ $gray-body: #606772;
 
 @media screen and (max-width: 600px){
     .portfolio-section{
+        h6{
+            left: 5%;
+        }
         .project{
             grid-template-columns: 1fr;
             width: 90%;
@@ -185,7 +188,7 @@ $gray-body: #606772;
             margin: 0 10px;
         } 
            p{
-               font-size: 13px;
+               font-size: 16px;
                color: $gray-body;
            }
             h3{
@@ -202,6 +205,9 @@ $gray-body: #606772;
 
 @media screen and (max-width: 600px){
     .blog-section{
+        h6{
+            left: 5%;
+        }
         .blog-card{
             display: grid;
             grid-template-columns: 1fr;

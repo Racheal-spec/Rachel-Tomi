@@ -36,45 +36,6 @@ $bg: #EDEDED;
         }
     }
 }
-
-//contact card section
-
-.card-section{
-    padding: 8% 0;
-    .card-div{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 10px;
-        position: absolute;
-        top: 25%;
-        padding: 50px 0;
-        .card{
-            width: 90%;
-            height: 100%;
-            background-color: white;
-            padding: 30px 10px;
-            margin: 0 40px;
-            box-shadow: 0 2px 3px 3px rgba(0, 0, 0, 0.116);
-        }
-    }
-}
-
-@media screen and (max-width: 600px){
-.card-section{
-    height: 100vh;
-    .card-div{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-row-gap: 80px;
-        top: 18%;
-        .card{
-            margin:0 auto;
-            width: 80%;
-             
-        }
-    }
-}
-}
 //contact form section
 
 .form-section{
@@ -82,18 +43,15 @@ $bg: #EDEDED;
     background-color: $bg;
     .form-div{
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        .form-img{
-            img{
-                max-width: 100%;
-            }
-            }
+        grid-template-columns: 1fr;
+        width: 90%;
+        margin: 0 auto;
             .main-form{
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 form{
-                    width: 50%;
+                    width: 30%;
                     padding: 20px 15px;
                     border-radius: 8px;
                     box-shadow: 0px 2px 3px 2px rgba(0, 0, 0, 0.151);
@@ -112,8 +70,10 @@ $bg: #EDEDED;
                         padding: 20px;
                     }
                     .textArea{
-                        width: 70%;
-                        padding: 30px;
+                        width: 85%;
+                        height: 150px;
+                        padding: 10px;
+                        margin: 10px 0;
                     }
                 }
         }

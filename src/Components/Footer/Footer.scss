@@ -29,7 +29,7 @@ footer{
                font-size: 12px;
            }
            p{
-               font-size: 14px;
+               font-size: 16px;
                text-align: left;
                color: $gray-body;
            }
@@ -37,7 +37,8 @@ footer{
                list-style: none;
                display: flex;
                position: absolute;
-               left: 2%;
+               bottom:50px;
+               left: 3%;
                .footer-link{
                    color: $gray-body;
                    transition: all 0.4s ease-in;
@@ -55,9 +56,6 @@ footer{
         .footer-address{
             margin: 50px 0;
             text-align: left;
-            p{
-                font-size: 16px;
-            }
             .sm-heading{
                 font-size: 14px;
                 font-weight: bold;
@@ -85,13 +83,27 @@ footer{
             width: 90%;
             .footer-contact{
                 .social-icons{
-                    left: -20%;
+                    left: -75px;
+                    bottom: 50px;
                 }
             }
             .footer-address{
                 text-align: left;
-                margin-top: 80px;
             }
         }
     }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1028px) {
+  footer{
+      .footer-div{
+          .footer-contact{
+            .social-icons{
+                position: absolute;
+                bottom: 2.5%;
+                left: -3%;
+              }
+          }
+      }
+  }
 }
