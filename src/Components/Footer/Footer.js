@@ -10,9 +10,11 @@ const Footer = () => {
 <div className="footer-contact">
     <h6>CONTACT</h6>
     <p>I'm always interested in working on new projects.
-    <Link to="/contact" className="contact">
-      <span> Hire me </span>
-        </Link>
+    <form action="mailto:folorunshotosin334@gmail.com" 
+    method="POST" 
+    encType="multipart/form-data">
+     <button>Hire me</button>
+     </form>  
     if you would like to work together 
     </p>
     <ul className="social-icons">

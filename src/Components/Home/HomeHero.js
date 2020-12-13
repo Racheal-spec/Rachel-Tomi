@@ -1,14 +1,8 @@
 import React from 'react';
-import {useHistory} from 'react-router-dom';
 import heroImg from '../../img/Tomi36new.png';
 import Button from '../Button/Button';
-const HomeHero = () => {
-let history = useHistory();
 
-const redirect = () => {
-    history.push('/contact')
-}
-    
+const HomeHero = () => {
     return(
 <div className="panel homehero-section">
 <div className="hero">
@@ -18,7 +12,11 @@ const redirect = () => {
     <p>
     I’m Rachel — a freelance front end developer based in the Lagos, Nigeria.
     </p>
-    <Button onClick={redirect}>WORK WITH ME</Button>
+   <form action="mailto:folorunshotosin334@gmail.com" 
+    method="POST" 
+    encType="multipart/form-data">
+   <Button>WORK WITH ME</Button>
+   </form>
 </div>
 </div>
     )

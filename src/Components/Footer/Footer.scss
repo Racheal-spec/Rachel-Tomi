@@ -14,12 +14,17 @@ footer{
         margin: 0 auto;
         height: 100%;
         .footer-contact{
-            .contact{
-                text-decoration: none;
+            button{
+                border: none;
+                background-color: transparent;
                 color: white;
+                cursor: pointer;
                 font-weight: bold;
                 &:hover{
                     color: $gray-body;
+                }
+                &:focus{
+                    outline: none;
                 }
             }
            h6{
