@@ -31,12 +31,10 @@ ScrollTrigger.create({
 })
 */
  const headerTl = gsap.timeline();
-
  headerTl.from('.nav-active', {opacity: 0, x: -100})
-
+ .fromTo('#mainBurger', {opacity: 0}, {opacity: 1, xPercent: 10})
 
 const heroTl = gsap.timeline();
-
 heroTl
 .from('.logo h1', {opacity: 0, yPercent: -50, delay: 0.5})
 .fromTo('.social-icons', {opacity: 0}, {opacity: 1, xPercent: 40})
@@ -46,9 +44,28 @@ heroTl
   x: -20
 })
 
-const contactTl = gsap.timeline();
+const portTl = gsap.timeline();
 
-//contactTl.from('.col-1', {duration: 1, opacity: 0, x: -20})
-//contactTl.from('.col-2-img', {duration: 1, opacity: 0, x: 20})
-contactTl.from('.card', {duration: 1, opacity: 0, y: 50 })
+portTl
+.from('h3', {
+  opacity: 0, 
+  yPercent: -30,
+  scrollTrigger: {
+    trigger: 'h3',
+    start: 'center center',
+    end: 'center center',
+    stagger: 0.2,
+    scrub: true
+  }
+})
+  .from('Button', {
+    opacity: 0,
+    yPercent: -50,
+    scrollTrigger: {
+      trigger: 'Button',
+      start: 'center center',
+      end: 'center center'
+    }
+  })
+
 

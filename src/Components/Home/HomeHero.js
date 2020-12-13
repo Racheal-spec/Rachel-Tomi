@@ -1,6 +1,7 @@
 import React from 'react';
 import heroImg from '../../img/Tomi36new.png';
 import Button from '../Button/Button';
+import {Link} from 'react-router-dom';
 
 const HomeHero = () => {
     return(
@@ -11,6 +12,7 @@ const HomeHero = () => {
     </div>
     <p>
     I’m Rachel — a freelance front end developer based in the Lagos, Nigeria.
+    I write codes to build applications using JavaScript.
     </p>
    <form action="mailto:folorunshotosin334@gmail.com" 
     method="POST" 

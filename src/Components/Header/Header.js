@@ -19,7 +19,7 @@ const closeMenu = () => {
   return(
 <nav className="navs">
   <div className="first-nav">
-          <div className= {click? 'burger' : 'fas fa-times'}  onClick={handleClick}>
+          <div className= {click? 'burger' : 'fas fa-times'} id="mainBurger"  onClick={handleClick}>
                <div className='line1'></div>
                <div className='line2'></div>
                <div className='line3'></div>
