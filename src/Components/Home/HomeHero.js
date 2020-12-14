@@ -1,7 +1,6 @@
 import React from 'react';
 import heroImg from '../../img/Tomi36new.png';
 import Button from '../Button/Button';
-import {Link} from 'react-router-dom';
 
 const HomeHero = () => {
     return(
