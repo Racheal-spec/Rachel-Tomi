@@ -10,7 +10,7 @@ const Footer = () => {
 <div className="footer-contact">
     <h6>CONTACT</h6>
     <p>I'm always interested in working on new projects.
-    <form action="mailto:folorunshotosin334@gmail.com" 
+    <form action="mailto:tomisinrachel@gmail.com" 
     method="POST" 
     encType="multipart/form-data">
      <button>Hire me</button>
@@ -21,6 +21,11 @@ const Footer = () => {
        <Link to={{pathname:"https://twitter.com/racheltomidev"}} target="_blank" className="footer-link">
            <li>
            <i className="fab fa-twitter-square" id="icon"></i>
+           </li>
+       </Link>
+       <Link to={{pathname:"https://www.linkedin.com/in/rachel-tomi-03572a195"}} target="_blank" className="footer-link">
+           <li>
+           <i className="fab fa-linkedin" id="icon"></i>
            </li>
        </Link>
        <Link to={{pathname:"https://github.com/racheal-spec"}} target="_blank" className="footer-link">
@@ -39,7 +44,7 @@ const Footer = () => {
  <div className="footer-address">
      <p className="sm-heading"><i className="fas fa-phone-alt" id="sm-icon"></i>
      +(234)811658887</p>
-     <p className="sm-heading"><i className="fas fa-envelope-open-text" id="sm-icon"></i>info@racheltomi.com</p>
+     <p className="sm-heading"><i className="fas fa-envelope-open-text" id="sm-icon"></i>tomisinrachel@gmail.com</p>
  </div>
  <div className="last-footer-div">© 2020 Rachel Tomi. All Rights Reserved.</div>
  </ div>

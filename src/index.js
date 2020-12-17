@@ -14,22 +14,13 @@ ReactDOM.render(
 
 reportWebVitals();
 
+window.addEventListener('load', () => {
+  const Preload = document.querySelector('.preloader');
+  Preload.classList.add('preload-finish');
+})
+
 gsap.registerPlugin(ScrollTrigger);
 
-/*
-gsap.utils.toArray(".panel").forEach((panel, i) => {
-  ScrollTrigger.create({
-    trigger: panel,
-    start: "top top",
-    pin: true, 
-    pinSpacing: false
-  });
-})
-
-ScrollTrigger.create({
-  snap: 1/4
-})
-*/
  const headerTl = gsap.timeline();
  headerTl.from('.nav-active', {opacity: 0, x: -100})
  .fromTo('#mainBurger', {opacity: 0}, {opacity: 1, xPercent: 10})

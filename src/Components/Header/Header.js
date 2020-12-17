@@ -37,6 +37,11 @@ const closeMenu = () => {
            <i className="fab fa-twitter-square" id="icon"></i>
            </li>
        </Link>
+       <Link to={{pathname:"https://www.linkedin.com/in/rachel-tomi-03572a195"}} target="_blank">
+           <li>
+           <i className="fab fa-linkedin" id="icon"></i>
+           </li>
+       </Link>
        <Link to={{pathname:"https://github.com/racheal-spec"}} target="_blank">
            <li>
            <i className="fab fa-github-square"  id="icon"></i>
@@ -67,6 +72,11 @@ const closeMenu = () => {
        <Link to={{pathname:"https://twitter.com/racheltomidev"}} target="_blank" onClick={closeMenu}>
            <li>
            <i className="fab fa-twitter-square" id="icon"></i>
+           </li>
+       </Link>
+       <Link to={{pathname:"https://www.linkedin.com/in/rachel-tomi-03572a195"}} target="_blank">
+           <li>
+           <i className="fab fa-linkedin" id="icon"></i>
            </li>
        </Link>
        <Link to={{pathname:"https://github.com/racheal-spec"}} target="_blank" onClick={closeMenu}>
